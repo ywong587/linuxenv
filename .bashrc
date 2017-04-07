@@ -106,17 +106,19 @@ export gwguest1='172.20.10.1'
 export gwguest2='10.1.10.1'
 export gwharris='192.168.37.2'
 
-alias tw0gw='sudo route add 	-net 34.194.132.0		netmask 255.255.255.0	gw "$gwguest"'
-alias tw1gw='sudo route add 	-net 52.202.168.0		netmask 255.255.255.0	gw "$gwguest"'
-alias tw2gw='sudo route add 	-net 52.24.196.0		netmask 255.255.255.0	gw "$gwguest"'
-alias tw3gw='sudo route add 	-net 52.192.206.0		netmask 255.255.255.0	gw "$gwguest"'
-alias tw4gw='sudo route add 	-net 23.23.0.0			netmask 255.255.0.0	gw "$gwguest"'
-alias tw5gw='sudo route add 	-net 23.21.250.0		netmask 255.255.255.0	gw "$gwguest"'
+alias noharris='sudo route del default gw "$gwharris"'
 
-alias tosgw='sudo route add 	-net 216.105.249.0 		netmask 255.255.255.0 	gw "$gwguest"'
-alias tosgw='sudo route add 	-net 216.105.249.0 		netmask 255.255.255.0 	gw "$gwharris"'
-alias ttgw='sudo  route add 	-net 184.73.251.0		netmask 255.255.255.0	gw "$gwguest"'
+alias tw0gw='sudo route add 	-net 34.194.132.0		netmask 255.255.255.0	gw "$gwguest1"'
+alias tw1gw='sudo route add 	-net 52.202.168.0		netmask 255.255.255.0	gw "$gwguest1"'
+alias tw2gw='sudo route add 	-net 52.24.196.0		netmask 255.255.255.0	gw "$gwguest1"'
+alias tw3gw='sudo route add 	-net 52.192.206.0		netmask 255.255.255.0	gw "$gwguest1"'
+alias tw4gw='sudo route add 	-net 23.23.0.0			netmask 255.255.0.0	gw "$gwguest1"'
+alias tw5gw='sudo route add 	-net 23.21.250.0		netmask 255.255.255.0	gw "$gwguest1"'
+
+alias ttgw='sudo  route add 	-net 184.73.251.0		netmask 255.255.255.0	gw "$gwguest1"'
+alias ttvlcgw='sudo  route add 	-net 107.23.117.0		netmask 255.255.255.0	gw "$gwharris"'
  
+alias tosgw='sudo route add 	-net 216.105.249.0 		netmask 255.255.255.0 	gw "$gwharris"'
 
 # gmail gateway alias
 alias gmailgw='sudo  route add -net 216.58.219.0 	netmask 255.255.255.0 gw 172.20.10.1'
